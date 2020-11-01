@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} tiles details {% endblock %}
+{% block body %}
+<style>
+  /* .card {
+    margin: 10px;
+    margin-left: 20px;
+  } */
+
+  /* .container {
+    width: 300px;
+    background-image: linear-gradient(to right, #f5b2f8, #a7eeaa);
+    background-image: linear-gradient(to right,#a7eeaa,#f5b2f8);
+
+  } */
+</style>
+<div class="container">
+
+  <div class="delete_image" style="width: 18rem;">
+    <img src="/media/{{photo.image}}" class="card-img-top" alt="error">
+    <div class="card-body">
+      <p class="card-title">type : <b>{{photo.Tiles_type}}</b></p>
+      <p class="card-text">rate : <b>{{photo.Tiles_rate}} </b> p.s.f.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+{% if user.is_authenticated %}
+<form action="{% url 'TilesDetails' photo.id %}" method="POST">
+  {% csrf_token %}
+
+  <!-- Button trigger modal -->
+  <div class="">
+    <input class="order_class" required="True" name="quantity" type="text" placeholder="quantity *(required)">
+  </div>
+  <div>
+    <input class="order_class" required="True" name="address" type="text" placeholder="address *(required)">
+  </div>
+
+
+  <div>
+    <input class="order_class" required="True" name="mobile_number" type="number"
+      placeholder="mobile number *(required)">
+  </div>
+
+  <button type="button" class="btn mx-4 my-2" data-toggle="modal" data-target="#orderModal">Order</button>
+  {% include 'order-modal_.html' %}
+</form>
+{% else %}
+<span class="container">want to buy? than<br> </span>
+<a class="btn btn-primary " href="{% url 'account_login' %}">Login</a>
+<!-- <span>here</span> -->
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} my order {% endblock %}
+{% block myorder %} active {% endblock myorder %}
+{% block body %}
+<style>
+.myorder_container{
+    border: 2px solid burlywood;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px;
+    width: 400px;
+    /* background-image: linear-gradient(to right,#ce9bcc,#ebbb0c); */
+
+}
+</style>
+{% for i in order %}
+<div class="myorder_container">
+
+<p>
+  coustumer:  <b>{{i.Person}}</b>
+</p>
+<p>
+  contact:  <b>{{i.Person_mobile_number}}</b>
+</p>
+<p>
+    address: <b>{{i.Person_address}}</b>
+</p>
+<p>
+    quantity: <b>{{i.Order_Tiles_Quantity}}</b>
+</p>
+<p>
+    on: <b>{{i.Order_Tiles_Time}}</b>
+</p>
+
+<img class="delete_image" src="/media/{{i.Order_image}}" alt="">
+
+<br>
+<a href="{% url 'userdeleteform' i.id %}" class="btn">Delete</a>
+</div>
+
+{% empty %}
+<p>NO order yet</p>
+{% endfor %}
+{% endblock %}

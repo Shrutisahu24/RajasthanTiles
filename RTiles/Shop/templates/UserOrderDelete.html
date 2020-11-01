@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} userdelete {% endblock %}
+
+{% block body %}
+<!-- <h5>{{order.id}}</h5> -->
+<img class="delete_image" src="/media/{{order.Order_image}}" alt="error">
+<p class="delete_image_type">{{order.Order_Tiles_type}}</p>
+
+<form action="{% url 'userdeleteform' order.id %}" method="POST">
+  {% csrf_token %}
+  <button type="button" class="btn" data-toggle="modal" data-target="#orderModal">delete</button>
+<!-- Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel">Are you sure !</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        want to delete?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <input type="submit" class="submit btn btn-primary" value="Yes">
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+{% endblock %}

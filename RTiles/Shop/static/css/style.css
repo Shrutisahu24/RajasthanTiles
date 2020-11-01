@@ -1,0 +1,239 @@
+/* base  */
+
+body {
+  /* background-image: linear-gradient(to right, #fc9c8b, #5f5a5a); */
+  background-image: linear-gradient(to right, #f7dbf7, #b6acb6);
+  /* background-image: linear-gradient(to right,#f0e8b8,#c8fdff,#f8e39d); */
+  margin: 0px;
+}
+
+* {
+
+  font-family: 'Bangers', cursive;
+  font-family: 'Cousine', monospace;
+  font-family: 'Sarabun', sans-serif;
+  font-family: 'Underdog', cursive;
+
+}
+
+.bg-dark {
+  /* background-color: #02196d !important; */
+  background-color: #010d37 !important;
+
+  /* overflow: hidden; */
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+}
+
+.user_name {
+  /* color: greenyellow; */
+  color: white;
+  margin: 10px;
+}
+
+
+
+/* base end */
+
+
+/* Tiles details */
+
+
+.d-block {
+  width: 150px;
+  height: auto;
+  /* margin-top: 25px; */
+  margin-bottom: 25px;
+  margin: 20px;
+
+}
+
+/* .saini img:hover {
+
+  width: 180px;
+  height: 270px;
+
+} */
+
+.card-img-top {
+  width: 350px;
+  height: auto;
+
+}
+
+
+/* tiles details end */
+
+
+/* Home  */
+.row {
+  margin: 0px;
+  padding: 5px;
+}
+
+
+.home-image {
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  /* background-size: cover; */
+  background-size: 50% 50%;
+}
+
+.home_div {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+/* home end */
+
+
+
+
+.container {
+
+  width: 100%;
+
+  margin: 0%;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.a input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+
+/* Tiles */
+.carousel-control-next,
+.carousel-control-prev {
+
+
+  background-color: black;
+  margin: 20px;
+  height: 50px;
+  width: 30px;
+  margin-top: 100px;
+
+}
+
+#carouselExampleCaptions {
+  margin: 10px;
+
+  /* background-color: red; */
+
+}
+
+.d-block {
+  width: 50px;
+  height: 200px;
+  margin-bottom: 5px;
+
+
+}
+
+/* #carouselExampleCaptions {
+  margin-bottom: 100px;
+  background-color: rgb(195, 206, 189);
+  width: 90%;
+  margin: auto;
+  margin-left: 20px;
+} */
+
+
+/* tiles end */
+.d-block {
+  margin: 30%;
+  /* width: 300px; */
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+}
+
+.w-50 {
+  width: 30% !important;
+}
+
+.card {
+  margin: 5px;
+  font-size: 12px;
+
+
+}
+
+/* .card-img-top {
+  width: 80%;
+  margin: auto;
+  margin-top: 5px;
+} */
+
+
+
+.btn {
+  /* color: #f5ce94; */
+  color: white;
+  background-color: #02196d;
+  font-size: 15px;
+  /* width: 95px; */
+  margin-left: 5px;
+
+}
+
+.btn:hover {
+  color: white;
+  background-color: #0037ff;
+  font-size: 13px;
+
+}
+
+.img {
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-left: 100px;
+}
+
+.order_class {
+  margin: 10px;
+  margin-left: 20px;
+
+  width: 250px;
+
+}
+
+/* userOrderDelete  and also tiles details*/
+
+.delete_image {
+  /* object-fit: cover; */
+  width: 200px;
+  /* height: 300px; */
+  margin: 20px;
+}
+
+.delete_image_type {
+  margin-left: 20px;
+}
+
+/* userOrderDelete */
+
+
+/* .order_class */
+
+.no_order{
+   
+  margin-top:50px;
+  text-align: center;
+}
+
+
+/* order end */

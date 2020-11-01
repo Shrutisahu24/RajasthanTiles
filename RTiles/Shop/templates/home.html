@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Rajasthan Tiles {% endblock %}
+
+{% block homeactive %} active {% endblock homeactive %}
+
+
+
+{% block body %}
+
+<div class="home_div">
+
+  <img class="home-image" src="{% static 'img/5.jpg' %}" alt="error">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container ">
+  <form action="{% url 'tilestypes' %}" method="POST">
+    {% csrf_token %}
+    <div class="row">
+      <div class="abc col-6 col-sm-4 col-md-3">
+        <img src="{% static 'img/1.jpg' %}" class=" d-block w-100 mx-0 my-10" alt="...">
+        <h5 name="room">room </h5>
+        <button name="room" type="submit" value="room" href="" class=" btn btn-light "> more </button>
+
+      </div>
+      <div class="abc col-6 col-sm-4 col-md-3">
+        <img src="{% static 'img/2.jpg' %}" class="d-block w-100 mx-0 my-10" alt="...">
+        <h5> kitchen wall </h5>
+
+        <button name="kitchen" type="submit" value="kitchen" href="" class=" btn btn-light"> more </button>
+      </div>
+      <div class="abc col-6 col-sm-4 col-md-3">
+        <img src="{% static 'img/3.jpg' %}" class="d-block w-100 mx-0 my-10" alt="...">
+        <h5> Bathroom wall</h5>
+        <button name="bathroom" type="submit" value="bathroom" href="" class=" btn btn-light"> more
+        </button>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<hr style="height:2px;border-width:0;color:gray;background-color:#010d37">
+  <div class="col">
+    <!-- <div class="">
+              <b>About Us : </b> <span> Something </span>
+        </div>
+        <hr style="margin-left:0px ;height:1px; width:50%;;color:gray;background-color:gray"> -->
+  
+    <address>
+      <b> email: </b> rajasthantiles@gmail.com<br>
+      <hr style="margin-left:0px ;height:0px; width:50%;;color:#010d37;background-color:#010d37">
+      <b> contact: </b> 8839368015<br>
+      <hr style="margin-left:0px ;height:0px; width:50%;;color:#010d37;background-color:#010d37">
+      <b>Rajasthan Tiles</b> <br>
+      Beside Raja Ki Bagiya<br>
+      chhindwara, <br>
+      Madhya Pradesh - 480001, India
+    </address>
+    <hr style="margin-left:0px ;height:0px; width:50%;;color:gray;background-color:#010d37">
+  
+  </div>
+{% endblock %}

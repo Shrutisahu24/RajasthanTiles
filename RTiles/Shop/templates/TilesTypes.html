@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} tiles types {% endblock %}
+
+{% block body %}
+
+<style>
+/* *{
+  font-family: 'Bangers', cursive;
+  font-family: 'Cousine', monospace;
+  font-family: 'Underdog', cursive;
+} */
+
+</style>
+
+<div class="row">
+    <!-- <h5>x.Tiles_type</h5> -->
+    {% for t in tiles %}
+    <div class="abc col-6 col-sm-4 col-md-3">
+      <div class="saini">
+
+
+        <img src="/media/{{t.image}}" class="d-block w-100 mx-0 my-10" alt="...">
+        <h5> {{t.Tiles_type}}</h5>
+
+        <a href="{% url 'TilesDetails' t.id %}" class="btn "> see details </a>
+      </div>
+    </div>
+
+
+    {% endfor %}
+
+  </div>
+
+
+  <hr style="height:2px;border-width:0;color:gray;background-color:#010d37">
+  <div class="col">
+    <!-- <div class="">
+              <b>About Us : </b> <span> Something </span>
+        </div>
+        <hr style="margin-left:0px ;height:1px; width:50%;;color:gray;background-color:gray"> -->
+  
+    <address>
+      <b> email: </b> rajasthantiles@gmail.com<br>
+      <hr style="margin-left:0px ;height:0px; width:50%;;color:#010d37;background-color:#010d37">
+      <b> contact: </b> 8839368015<br>
+      <hr style="margin-left:0px ;height:0px; width:50%;;color:#010d37;background-color:#010d37">
+      <b>Rajasthan Tiles</b> <br>
+      Beside Raja Ki Bagiya<br>
+      chhindwara, <br>
+      Madhya Pradesh - 480001, India
+    </address>
+    <hr style="margin-left:0px ;height:0px; width:50%;;color:gray;background-color:#010d37">
+  
+  </div>
+{% endblock %}

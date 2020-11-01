@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} your order {% endblock %}
+{% block yourorderactive %} active {% endblock yourorderactive %}
+{% block body %}
+<style>
+  .card {
+    margin: 20px;
+  }
+  .no_order{
+   
+    margin-top:25px;
+    text-align: center;
+  }
+</style>
+{% for i in photo %}
+<div class="delete_image" style="width: 12em;">
+  <img src="/media/{{i.Order_image}}" class="card-img-top" alt="error">
+  <div class="card-body">
+    <p class="card-title">type: <b>{{i.Order_Tiles_name}}</b></p>
+    <p class="card-text">rate:<b> {{i.Order_Tiles_rate}}</b> p.s.f</p>
+    <p class="card-text">on:<b> {{i.Order_Tiles_Time}}</b></p>
+ 
+      <a href="{% url 'userdeleteform' i.id %}" class="btn btn-primary">remove</a>
+   
+  </div>
+</div>
+{% empty %}
+<h3 class="no_order"> <b>No order yet</b> </h3>
+
+{% endfor %}
+<!-- 
+{% for i in photo %}
+<h1>Tiles Order</h1>
+<h1>Tiles Name {{i.Order_Tiles_type}}</h1>
+
+<img src="/media/{{i.Order_image}}" class="card-img-top" alt="error">
+{% empty %}
+<p>NO order yet</p>
+{% endfor %} -->
+{% endblock %}
